@@ -24,6 +24,9 @@ import time
 from copy import deepcopy
 from datetime import datetime, timedelta
 from pathlib import Path
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
 
 try:
     import comet_ml  # must be imported before torch (if installed)
